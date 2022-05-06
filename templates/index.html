@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Music box</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    </head>
+    <style type="text/css">  
+        .container{
+            height : 100vh;
+            width : 100%;
+            background-image: url("static/media/image.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+    </style>
+
+
+<body >
+    <div class="container">
+    <div class="navbar">
+        <img class="logo"> <!-- add logo -->
+        
+        <ul>
+            <li><a href="#"> Home</a></li>
+            <li><a href="#"> About</a></li>
+        </ul>
+    </div>
+
+
+    <div class="content">
+        <div class="left-col">
+            <h1>Music Box</h1>
+        </div>
+    <div class="right-col">
+        <p>Click Here To Start</p>
+        <a href="{{ url_for('home') }}">
+            <img src="{{url_for('static', filename='media/play.png')}}" id="icon"> 
+        </a>
+    </div>
+    
+
+    </div>
+
+
+
+</div>
+
+</body>
+</html>

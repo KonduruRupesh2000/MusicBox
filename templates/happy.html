@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    
+
+    <title>Music Player</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        top:12px;
+        right:80px;
+        position: fixed;
+      }
+      
+      li {
+        display: inline;
+        padding: 13px;
+      }
+      
+    </style>
+
+  </head>
+  <body style="background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  ">
+    <h1 style="position:fixed; top:24%">Happy Music Player</h1>
+    <ul>
+      <li><a href="{{ url_for('index') }}"> Home</a></li>
+      <li><a href="#"> About</a></li>
+  </ul>
+    <div class="music-container" id="music-container">
+      <ul>
+        <li><a href="{{ url_for('index') }}"> Home</a></li>
+        <li><a href="#"> About</a></li>
+    </ul>
+      <div class="music-info">
+        <h4 id="title"></h4>
+        <div class="progress-container" id="progress-container">
+          <div class="progress" id="progress"></div>
+        </div>
+      </div>
+
+      <audio src="static/Songs/Party_songs/Arabic Kuthu.mp3" id="audio"></audio>
+
+      <div class="img-container">
+        <img src="static/images/Arabic Kuthu.jpeg" alt="music-cover" id="cover" />
+      </div>
+      <div class="navigation">
+        <button id="prev" class="action-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+          <i class="fas fa-forward"></i>
+        </button>
+      </div>
+    </div>
+    
+
+    <script src="{{url_for('static', filename='happy.js')}}"></script>
+  </body>
+</html>
